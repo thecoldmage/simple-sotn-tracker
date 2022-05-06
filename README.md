@@ -1,3 +1,5 @@
+https://thecoldmage.github.io/simple-sotn-tracker/
+
 Hello,
 
 This is a simple Castlevania: Symphony of the Night Randomizer relic and item tracker. 
