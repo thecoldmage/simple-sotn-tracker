@@ -17,15 +17,29 @@ color:#FFF;
 }
 
 .outerWrapper{
-padding:10px;
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+padding: 20px;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+.trackerColumn{
+display: flex;
+flex-direction: column;
+gap: 20px;
 }
 
 .trackerWrapper{
-width:400px;
-min-height:400px;
-border:1px solid #000;
-float:left;
-padding-top:20px;
+width: 400px;
+min-height: 400px;
+border: 2px solid rgba(255, 255, 255, 0.2);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+padding-top: 20px;
+border-radius: 12px;
+background: linear-gradient(135deg, rgba(0, 0, 50, 0.6), rgba(0, 0, 32, 0.8));
+backdrop-filter: blur(10px);
 }
 
 .trackerWrapper span{
@@ -84,44 +98,55 @@ top: -190px;
 }
 
 .backgroundColor{
-clear:both;
 text-align:center;
 width:400px;
-padding-top:5px;
-padding-bottom:5px;
-background-color:#eee;
-border-left:1px solid #000;
-border-right:1px solid #000;
-border-bottom:1px solid #000;
+padding: 20px;
+background: linear-gradient(135deg, rgba(238, 238, 238, 0.95), rgba(255, 255, 255, 0.9));
+border: 2px solid rgba(255, 255, 255, 0.3);
+border-radius: 12px;
 color:#000;
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(10px);
 }
 
 #description{
-margin-left:20px;
-padding:20px;
-border:1px solid #FFF;
-font-size:14px;
-height:15px;
+margin-bottom: 20px;
+padding: 15px 20px;
+border: 2px solid rgba(255, 255, 255, 0.3);
+border-radius: 8px;
+font-size: 14px;
+min-height: 20px;
+background: rgba(0, 0, 50, 0.4);
+box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 table{
-margin-left:20px;
-margin-right:20px;
+margin: 10px;
+background: rgba(0, 0, 50, 0.3);
+border-radius: 8px;
+padding: 10px;
+border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tableHeader{
-font-weight:bold;
-text-align:center;
-height:40px;
+font-weight: bold;
+text-align: center;
+height: 40px;
+font-size: 16px;
+color: #fff;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+letter-spacing: 0.5px;
 }
 
 .checkList{
-margin-left:auto;
-margin-right:auto;
-margin-top:10px;
-position:absolute;
-top:0px;
-left:420px;
+flex: 1;
+min-width: 600px;
+background: linear-gradient(135deg, rgba(0, 0, 50, 0.5), rgba(0, 0, 32, 0.7));
+border: 2px solid rgba(255, 255, 255, 0.2);
+border-radius: 12px;
+padding: 20px;
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(10px);
 }
 
 .checkList img{
@@ -197,45 +222,118 @@ top: 2px;
 }
 
 #seedName{
-font-size:14px;
-padding:4px;
-border:1px solid #ccc;
-width:250px;
-display:inline;
-vertical-align:middle;
+font-size: 14px;
+padding: 8px 12px;
+border: 2px solid #ccc;
+border-radius: 6px;
+width: 250px;
+display: inline;
+vertical-align: middle;
+transition: all 0.3s ease;
+background: white;
+}
+
+#seedName:focus{
+outline: none;
+border-color: #2196F3;
+box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
 }
 
 #saveSeed{
-font-size:14px;
-display:inline;
-vertical-align:middle;
-width:100px;
-padding-left:20px;
-padding-right:20px;
-padding-top:5px;
-padding-bottom:5px;
-background-color:#500001;
-color:#FFF;
-border-radius:4px;
-cursor:pointer;
-font-weight:bold;
-transition: .5s all;
+font-size: 14px;
+display: inline-block;
+vertical-align: middle;
+padding: 8px 20px;
+background: linear-gradient(135deg, #500001, #7a0002);
+color: #FFF;
+border-radius: 8px;
+border: 2px solid rgba(197, 0, 3, 0.3);
+cursor: pointer;
+font-weight: bold;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(80, 0, 1, 0.4);
 }
 
 #saveSeed:hover{
-background-color:#c50003;
-transition: .5s all;
+background: linear-gradient(135deg, #c50003, #ff0004);
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(197, 0, 3, 0.6);
 }
 
 .disabled{
-background-color:#333 !important;
-cursor:not-allowed !important;
+background: linear-gradient(135deg, #333, #444) !important;
+cursor: not-allowed !important;
+opacity: 0.6 !important;
+transform: none !important;
+box-shadow: none !important;
 }
 
 #reset{
-font-size:12px;
-cursor:pointer;
-font-weight:bold;
+font-size: 13px;
+cursor: pointer;
+font-weight: bold;
+display: inline-block;
+padding: 6px 16px;
+background: linear-gradient(135deg, rgba(80, 0, 1, 0.8), rgba(122, 0, 2, 0.8));
+border-radius: 6px;
+border: 2px solid rgba(197, 0, 3, 0.3);
+transition: all 0.3s ease;
+color: #fff;
+}
+
+#reset:hover{
+background: linear-gradient(135deg, #c50003, #ff0004);
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(197, 0, 3, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+.checkList {
+	min-width: 500px;
+}
+}
+
+@media (max-width: 900px) {
+.outerWrapper {
+	flex-direction: column;
+	align-items: center;
+}
+
+.checkList {
+	min-width: auto;
+	width: 100%;
+	max-width: 600px;
+}
+
+table {
+	margin: 5px;
+}
+}
+
+@media (max-width: 500px) {
+.trackerWrapper, .backgroundColor {
+	width: 100%;
+	max-width: 400px;
+}
+
+.checkList {
+	padding: 10px;
+}
+
+#seedName {
+	width: 180px;
+}
+}
+
+/* Improved hover effects for containers */
+.container {
+transition: all 0.2s ease;
+}
+
+.container:hover {
+background: rgba(255, 255, 255, 0.05);
+border-radius: 4px;
 }
 </style>
 </head>
@@ -260,6 +358,7 @@ Thanks and I hope you enjoy it.
  */
 </script>
 <div class="outerWrapper">
+	<div class="trackerColumn">
 	<div id="tracker" class="trackerWrapper" style="background-color:#000020;">
 		<div class="relics">
 			<span id="soulOfBat"><img src="" /></span>
@@ -319,6 +418,7 @@ Thanks and I hope you enjoy it.
 		</span>
 		<p style="margin-top:5px;"><div id="reset">Reset</div></p>
 		<p style="font-size:10px;margin-top:20px;">Simple Castlevania: Symphony of the Night Item Tracker v0.6 - By: TheColdMage</p>
+	</div>
 	</div>
 
 	<div class="checkList">
